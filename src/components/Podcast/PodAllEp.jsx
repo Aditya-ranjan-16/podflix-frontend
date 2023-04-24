@@ -1,8 +1,6 @@
 import React from "react";
 
 import img from "../../assets/lm.jpg";
-import play from "../../assets/group 8.png";
-import { Link } from "react-router-dom";
 
 function PodAllEp({ data }) {
   return (
