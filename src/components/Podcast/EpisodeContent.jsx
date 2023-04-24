@@ -12,7 +12,7 @@ function EpisodeContent({ data }) {
   const playEpisode = () => {
     let setplayer = {
       volume: 0.5,
-      src: `http://localhost:5000${data.videos[0]}`,
+      src: `https://unusual-handbag-ox.cyclic.app${data.videos[0]}`,
       type: data.podcast.type,
       currentTime: 0,
       displayDuration: 0.0,

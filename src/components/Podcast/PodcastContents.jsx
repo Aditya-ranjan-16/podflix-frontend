@@ -87,7 +87,7 @@ function PodcastContents({ data }) {
             className="w-[260px] sm:w-[300px] lg:w-[350px] h-[200px] sm:h-[260px] lg:h-[300px]"
             height={300}
             width={350}
-            src={`http://localhost:5000${data.thumbnail[0]}`}
+            src={`https://unusual-handbag-ox.cyclic.app${data.thumbnail[0]}`}
           />
         </div>
         <div className="pt-4 flex flex-col items-center lg:items-start w-full lg:w-[70%]">

@@ -12,7 +12,7 @@ function LTCard({ item }) {
           className="rounded-xl h-[180px] sm:h-[240px]"
           width={200}
           height={240}
-          src={`http://localhost:5000${item.thumbnail[0]}`}
+          src={`https://unusual-handbag-ox.cyclic.app${item.thumbnail[0]}`}
           alt=""
         />
       </div>
