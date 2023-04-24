@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 
 import img from "../../assets/lm.jpg";
 
-import play from "../../assets/group 8.png";
+import play from "../../assets/Group_8.png";
 import { Link } from "react-router-dom";
 
 import AuthContext from "../../store/auth-context";
