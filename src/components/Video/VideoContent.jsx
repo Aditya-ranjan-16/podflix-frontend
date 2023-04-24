@@ -36,6 +36,7 @@ const data = [
 ];
 
 function VideoContent() {
+  console.log("hhh");
   return (
     <div className="bg-[#1e1e1e] w-[100%] text-white pl-[5%] pb-20 font-poppins">
       <div className="flex space-x-8 px-24 pt-16 pb-8">
@@ -48,15 +49,7 @@ function VideoContent() {
       <div className="flex space-x-8 px-24 pt-8 pb-8">
         <h1 className="text-white  text-2xl md:text-3xl lg:text-5xl">All </h1>
       </div>
-      <div className="flex pl-24 space-x-4 overflow-x-scroll scrollbar-hide h-[300px] sm:h-[340px]">
-        {data.map((item) => (
-          <div>
-            <Link to="/podcast">
-              <CWCard image={item.img} />
-            </Link>
-          </div>
-        ))}
-      </div>
+      <div className="flex pl-24 space-x-4 overflow-x-scroll scrollbar-hide h-[300px] sm:h-[340px]"></div>
     </div>
   );
 }

@@ -125,7 +125,7 @@ function VideoPlayer() {
   }, [authCtx.player, fileRef.current]);
   return (
     <div
-      className={`bg-[#1c1c1c] flex flex-col  items-center justify-center z-10 fixed bottom-0 h-[20%] w-[100%] text-white pl-[5%] `}
+      className={`bg-[#1c1c1c] flex flex-col  items-center justify-center z-10 fixed bottom-0 h-[10%] w-[100%] text-white pl-[5%] `}
     >
       <div className="px-6 py-4 w-full flex justify-between">
         <div className="w-[20%]">

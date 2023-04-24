@@ -25,7 +25,7 @@ export default function IndexMain() {
   };
   useEffect(() => {
     makereq();
-  });
+  }, []);
   return (
     <div className="bg-black">
       <div className="flex">
@@ -36,8 +36,7 @@ export default function IndexMain() {
           <div className="w-[100%]  pl-[40px]">
             <LatestTrending type={"Audios"} data={audio} />
             <LatestTrending type={"Videos"} data={video} />
-            <ContinueListening />
-            <ContinueWatching />
+
             <PopularGenres />
           </div>
         </div>

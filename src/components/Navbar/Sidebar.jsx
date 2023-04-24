@@ -13,14 +13,14 @@ import AuthContext from "../../store/auth-context";
 function Sidebar() {
   const authCtx = useContext(AuthContext);
   return (
-    <div className="bg-transparent min-w-[30px] hover:w-[10%] transition-all  z-10 min-h-screen w-[5%] fixed flex flex-col items-start justify-center">
+    <div className="bg-transparent hover:bg-gradient-to-r text-gray-400 font-poppins from-black to-transparent min-w-[30px] hover:w-[40%] transition-all  z-10 min-h-screen w-[4%] fixed flex flex-col items-start justify-center">
       <div className="sticky clSS flex flex-col  w-full font-poppins text-white text-lg h-[100vh]">
         <div className="pt-6 pl-4">
           <Link className="text-3xl font-bold" to="/">
             PodFlix
           </Link>
         </div>
-        <div className="h-full flex flex-col justify-center">
+        <div className="h-full flex group flex-col justify-center">
           <div className="flex w-full pb-8">
             {authCtx.isLoggedIn && (
               <div className="">
@@ -49,7 +49,7 @@ function Sidebar() {
               </div>
             )}
           </div>
-          <div className="flex  w-full my-2">
+          <div className="flex  w-full my-4">
             <Link className="flex space-x-2 items-start ml-4 w-full" to="/">
               <img className="w-[20px]" src={home} />
               <h1 className="hidden md:block invisible group-hover:visible">
@@ -57,7 +57,7 @@ function Sidebar() {
               </h1>
             </Link>
           </div>
-          <div className="flex w-full  my-2">
+          {/* <div className="flex w-full  my-4">
             <Link
               className="flex space-x-2  items-start ml-4  w-full"
               to="/audio"
@@ -67,8 +67,8 @@ function Sidebar() {
                 Audio
               </h1>
             </Link>
-          </div>
-          <div className="flex w-full  my-2">
+          </div> */}
+          {/* <div className="flex w-full  my-4">
             <Link
               className="flex  space-x-2 items-start ml-4 w-full"
               to="/video"
@@ -78,8 +78,8 @@ function Sidebar() {
                 Video
               </h1>
             </Link>
-          </div>
-          <div className="flex w-full   my-2">
+          </div> */}
+          <div className="flex w-full   my-4">
             <Link
               className="flex  space-x-2 items-start ml-4  w-full"
               to="/library"
@@ -90,7 +90,7 @@ function Sidebar() {
               </h1>
             </Link>
           </div>
-          <div className="flex w-full   my-2">
+          <div className="flex w-full   my-4">
             <Link
               className="flex  space-x-2 items-start ml-4  w-full"
               to="/search"

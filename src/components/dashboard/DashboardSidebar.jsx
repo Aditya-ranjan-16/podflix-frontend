@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import user from "../../assets/user.svg";
@@ -6,8 +6,13 @@ import ypod from "../../assets/plus-circle.svg";
 import logout from "../../assets/power.svg";
 import img from "../../assets/music.jpg";
 import edit from "../../assets/edit.svg";
+import AuthContext from "../../store/auth-context";
 
 function DashboardSidebar() {
+  const authCtx = useContext(AuthContext);
+  const logout = async () => {
+    authCtx.logout();
+  };
   return (
     <div className="bg-[#0f0f0f] min-h-screen w-[80px] lg:w-[200px] fixed flex flex-col justify-center">
       <div className="pl-8 text-white">
@@ -45,15 +50,10 @@ function DashboardSidebar() {
             <h1 className="hidden lg:block ">Your Podcast</h1>
           </Link>
         </div>
-        <hr className="hidden lg:block border-[2px] w-[80%] border-[#EB740B]" />
-        <div className="flex w-[80%] mt-4">
-          <Link
-            className="flex justify-center lg:justify-start space-x-2 w-full"
-            to="/"
-          >
-            <img className="w-8 lg:w-4" src={logout} />
-            <h1 className="hidden lg:block ">Log out</h1>
-          </Link>
+        <hr className="hidden  lg:block border-[2px] w-[80%] border-[#EB740B]" />
+        <div onClick={logout} className="flex cursor-pointer w-[80%] mt-4">
+          <img className="w-8 lg:w-4" src={logout} />
+          <h1 className="hidden lg:block ">Log out</h1>
         </div>
         <hr className="hidden lg:block border-[2px] w-[80%] border-[#EB740B]" />
       </div>

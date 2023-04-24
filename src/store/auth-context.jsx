@@ -16,6 +16,8 @@ const AuthContext = React.createContext({
     pic: "",
     email: "",
     bio: "",
+    podcast: [],
+    createdPodcast: [],
   },
   target: null,
   player: {
@@ -121,10 +123,26 @@ export const AuthContextProvider = (props) => {
     }
   }, []);
 
-  const loginHandler = (name, email, pic, bio, token, expirationTime) => {
+  const loginHandler = (
+    name,
+    email,
+    pic,
+    bio,
+    podcast,
+    createdPodcast,
+    token,
+    expirationTime
+  ) => {
     localStorage.setItem("token", token);
-    console.log("helldfifjirfrjfirr");
-    const setuserdata = { name: name, pic: pic, email: email, bio: bio };
+
+    const setuserdata = {
+      name: name,
+      pic: pic,
+      email: email,
+      bio: bio,
+      podcast: podcast,
+      createdPodcast: createdPodcast,
+    };
 
     localStorage.setItem("user", JSON.stringify(setuserdata));
 

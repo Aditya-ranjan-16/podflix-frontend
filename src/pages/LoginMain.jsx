@@ -22,16 +22,19 @@ function LoginMain() {
     const data = res.data;
     if (res.data.success == true) {
       const info = data.user;
+      console.log(info);
       await authCtx.login(
         info.name,
         info.email,
         info.avatar,
         info.bio,
+        info.podcast,
+        info.createdPodcast,
         res.data.token,
         10800000
       );
+      redirect("/");
     }
-    redirect("/");
   };
 
   return (

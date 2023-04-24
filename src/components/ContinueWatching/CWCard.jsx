@@ -10,7 +10,7 @@ function CWCard(props) {
       <div className="absolute flex justify-between w-full bottom-0 px-2 pb-2">
         <div className="flex space-x-2">
           <img src={fav} width={20} />
-          <img src={sub} width={20} />
+          {/* <img src={sub} width={20} /> */}
         </div>
         <div>
           <img src={shr} width={20} />

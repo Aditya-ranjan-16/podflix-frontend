@@ -19,10 +19,7 @@ const LoginMain = React.lazy(() => import("./pages/LoginMain"));
 const Episode = React.lazy(() => import("./pages/podcast/Episode"));
 const PodIndex = React.lazy(() => import("./pages/podcast/Index"));
 //library
-const LibIndex = React.lazy(() => import("./pages/library/IndexLib"));
-const Favourites = React.lazy(() => import("./pages/library/Favourites"));
-const Recent = React.lazy(() => import("./pages/library/RecentLib"));
-const Subscribed = React.lazy(() => import("./pages/library/Subscribed"));
+const LibIndex = React.lazy(() => import("./pages/library/Subscribed"));
 //dashboard
 const DashIndex = React.lazy(() => import("./pages/dashboard/Index"));
 const PodcastPage = React.lazy(() => import("./pages/dashboard/PodcastPage"));
@@ -144,33 +141,6 @@ function App() {
             }
           />
 
-          <Route
-            path="/library/favourites"
-            element={
-              <Suspense fallback={<LoadingPage />}>
-                {" "}
-                <Favourites />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/library/recent"
-            element={
-              <Suspense fallback={<LoadingPage />}>
-                {" "}
-                <Recent />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/library/subscribed"
-            element={
-              <Suspense fallback={<LoadingPage />}>
-                {" "}
-                <Subscribed />
-              </Suspense>
-            }
-          />
           {/* dashboard */}
 
           {authCtx.isLoggedIn && (
@@ -240,7 +210,7 @@ function App() {
             />
           )}
 
-          <Route path="*" element={<LoadingPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Router>
     </div>
