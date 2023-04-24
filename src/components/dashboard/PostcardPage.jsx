@@ -1,7 +1,7 @@
 import React from "react";
 
 import img from "../../assets/music.jpg";
-import play from "../../assets/group 8.png";
+import play from "../../assets/Group_8.png";
 
 function PostcardPage() {
   return (
