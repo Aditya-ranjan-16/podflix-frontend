@@ -9,7 +9,6 @@ function VideoMain() {
         <Sidebar />
         <div className="w-full">
           <VideoContent />
-          <VideoPlayer />
         </div>
       </div>
     </div>

@@ -5,6 +5,7 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
+import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
 import React, { useContext, Suspense } from "react";
 
 //pages
@@ -213,6 +214,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Router>
+      <VideoPlayer />
     </div>
   );
 }

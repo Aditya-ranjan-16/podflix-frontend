@@ -34,13 +34,17 @@ function VideoPlayer() {
 
   const handleTimeUpdate = () => {
     const val = fileRef.current.currentTime;
+
     if (val / 60 > 1) {
       const minutes = (val / 60).toFixed(2);
+      console.log("sss");
       setDisplayTime({ ...displaytime, ["curr"]: minutes });
     } else {
+      console.log("sssdjcjd");
       setDisplayTime({ ...displaytime, ["curr"]: Math.round(val) });
     }
     setCurrentTime(fileRef.current.currentTime);
+
     const setPlayer = {
       volume: volume,
       src: src,
@@ -68,6 +72,7 @@ function VideoPlayer() {
     const { duration } = fileRef.current;
     const seekTime = duration * (event.target.value / 100);
     fileRef.current.currentTime = seekTime;
+    console.log(seekTime);
     setCurrentTime(seekTime);
   };
   const handle15Seek = (event) => {
@@ -94,9 +99,7 @@ function VideoPlayer() {
     fileRef.current.playbackRate = speed;
     setPlaybackRate(speed);
   };
-  const handleCanPlayThrough = () => {
-    togglePlay(true);
-  };
+
   useEffect(() => {
     if (authCtx.player != null) {
       const data = authCtx.player;
@@ -105,27 +108,11 @@ function VideoPlayer() {
       setType(data.type);
       setVolume(data.volume);
       setDisplayTime({ ...displaytime, ["duration"]: data.displayDuration });
-      if (fileRef && fileRef.current) {
-        // fileRef.current.play();
-        // const video = fileRef.current;
-        // console.log("dd");
-        // const handleLoadedMetadata = () => {
-        //   console.log("dd");
-        //   video.currentTime = data.currentTime; // start at 30 seconds
-        //   video.playbackRate = data.playbackRate;
-        // };
-        // video.addEventListener("loadedmetadata", handleLoadedMetadata);
-        // return () => {
-        //   video.removeEventListener("loadedmetadata", handleLoadedMetadata);
-        // };
-      }
     }
-
-    // setSrc(`http://localhost:5000${initSrc}`)
   }, [authCtx.player, fileRef.current]);
   return (
     <div
-      className={`bg-[#1c1c1c] flex flex-col  items-center justify-center z-10 fixed bottom-0 h-[10%] w-[100%] text-white pl-[5%] `}
+      className={`bg-[#1c1c1c] flex flex-col  items-center justify-center z-10 fixed bottom-0 ${type} h-[15%] w-[100%] text-white pl-[5%] `}
     >
       <div className="px-6 py-4 w-full flex justify-between">
         <div className="w-[20%]">
@@ -133,7 +120,7 @@ function VideoPlayer() {
         </div>
 
         <div className=" w-full  flex flex-col justify-center  items-center">
-          <div className="flex space-x-2 justify-center items-center ">
+          <div className="flex space-x-2 mr-10 justify-center items-center ">
             <div>
               <select
                 name="speed"
@@ -156,9 +143,7 @@ function VideoPlayer() {
             >
               <img className=" w-[20px] rounded-md" src={B15} />
             </button>
-            <button className="">
-              <img className=" w-[22px] rounded-md" src={Back} />
-            </button>
+
             <div>
               {!isPlaying && (
                 <button className="" onClick={togglePlay}>
@@ -172,9 +157,6 @@ function VideoPlayer() {
               )}
             </div>
 
-            <button className="">
-              <img className=" w-[22px] rounded-md" src={Fwd} />
-            </button>
             <button
               onClick={() => {
                 handle15Seek("forward");
@@ -215,13 +197,15 @@ function VideoPlayer() {
         </div>
       </div>
 
-      <video
-        ref={fileRef}
-        src={src}
-        className="w-[75%] h-[70%]  bg-black"
-        onTimeUpdate={handleTimeUpdate}
-        onLoadedData={handleLoadedData}
-      />
+      {type == "video" && (
+        <video
+          ref={fileRef}
+          src={src}
+          className="w-[75%] h-[70%]  bg-black"
+          onTimeUpdate={handleTimeUpdate}
+          onLoadedData={handleLoadedData}
+        />
+      )}
       {type == "audio" && (
         <audio
           ref={fileRef}

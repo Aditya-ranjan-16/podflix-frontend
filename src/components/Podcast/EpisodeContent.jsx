@@ -18,6 +18,7 @@ function EpisodeContent({ data }) {
       displayDuration: 0.0,
       playbackRate: 1,
     };
+    authctx.setplayer(setplayer);
     authctx.fileref.current.play();
   };
   return (
@@ -39,9 +40,8 @@ function EpisodeContent({ data }) {
         </div>
       </div>
       <div className="flex justify-center lg:justify-start items-center space-x-2 px-24 pt-6">
-        <Link to="/podcast/episodeplay">
-          <img className="w-6 sm:w-8" src={play} />
-        </Link>
+        <img className="w-6 sm:w-8" onClick={playEpisode} src={play} />
+
         <h1 className="text-sm sm:text-base">31:42:05</h1>
         <div className="bg-gray-500 rounded-full h-1 w-[100px]">
           <div className="bg-[#eb740b] rounded-full h-1 w-[50%]"></div>

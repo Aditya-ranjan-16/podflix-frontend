@@ -23,10 +23,7 @@ function Episode() {
           {episodeData != null && (
             <>
               <EpisodeContent data={episodeData} />
-              <VideoPlayer
-                initSrc={episodeData.videos[0]}
-                type={episodeData.podcast.type}
-              />
+              <VideoPlayer />
             </>
           )}
         </div>

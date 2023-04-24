@@ -25,10 +25,7 @@ function Subscribed() {
     <div>
       <div className="flex">
         <Sidebar />
-        <div className="w-full">
-          {data != null && <SubscribedMain />}
-          <VideoPlayer />
-        </div>
+        <div className="w-full">{data != null && <SubscribedMain />}</div>
       </div>
     </div>
   );
