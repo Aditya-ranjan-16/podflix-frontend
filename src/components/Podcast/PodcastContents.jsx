@@ -1,9 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import share from "../../assets/share-2.png";
 
-import heart from "../../assets/heart.svg";
-import play from "../../assets/group 8.png";
-
 import PodAllEp from "./PodAllEp";
 import { Link } from "react-router-dom";
 import AuthContext from "../../store/auth-context";
