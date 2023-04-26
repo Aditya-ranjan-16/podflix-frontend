@@ -11,6 +11,7 @@ import MicNoneIcon from "@mui/icons-material/MicNone";
 import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
 import LocalLibraryIcon from "@mui/icons-material/LocalLibrary";
 import SearchIcon from "@mui/icons-material/Search";
+import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 
 export default function Nav() {
   return (
@@ -21,8 +22,9 @@ export default function Nav() {
             <FitbitIcon fontSize="large" />
           </Link>
         </div>
-        <Link to="/" className="LinkStyle">
-          <HomeIcon />
+        <Link to="/Login" className="LinkStyle">
+          <PersonOutlineIcon />
+          {/* <HomeIcon /> */}
         </Link>
         <Link to="/Audio" className="LinkStyle">
           <MicNoneIcon />
@@ -37,8 +39,8 @@ export default function Nav() {
           <SearchIcon />
         </Link>
         <div className={NCss.hoverApper}>
-          <Link to="/" className="LinkStyle">
-            <p>Home</p>
+          <Link to="/Login" className="LinkStyle">
+            <p>Login</p>
           </Link>
           <Link to="/Audio" className="LinkStyle">
             <p>Audio</p>
