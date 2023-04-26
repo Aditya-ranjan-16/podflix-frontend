@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // Css
 import NCss from "./Css/Nav.module.css";
@@ -13,11 +14,21 @@ import SearchIcon from "@mui/icons-material/Search";
 export default function Nav() {
   return (
     <div className={NCss.mDiv}>
-      <HomeIcon />
-      <MicNoneIcon />
-      <OndemandVideoIcon />
-      <LocalLibraryIcon />
-      <SearchIcon />
+      <Link to="/" className="LinkStyle">
+        <HomeIcon />
+      </Link>
+      <Link to="/Audio" className="LinkStyle">
+        <MicNoneIcon />
+      </Link>
+      <Link to="/Videos" className="LinkStyle">
+        <OndemandVideoIcon />
+      </Link>
+      <Link to="/Library" className="LinkStyle">
+        <LocalLibraryIcon />
+      </Link>
+      <Link to="/Search" className="LinkStyle">
+        <SearchIcon />
+      </Link>
     </div>
   );
 }
