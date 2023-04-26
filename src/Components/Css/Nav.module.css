@@ -4,9 +4,11 @@
   left: 0px;
   height: 100vh;
   display: flex;
+  gap: 30px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: red;
+  padding: 0px 20px;
   z-index: 99;
 }
