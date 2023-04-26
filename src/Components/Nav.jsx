@@ -8,6 +8,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import MicNoneIcon from "@mui/icons-material/MicNone";
 import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
 import LocalLibraryIcon from "@mui/icons-material/LocalLibrary";
+import SearchIcon from "@mui/icons-material/Search";
 
 export default function Nav() {
   return (
@@ -16,6 +17,7 @@ export default function Nav() {
       <MicNoneIcon />
       <OndemandVideoIcon />
       <LocalLibraryIcon />
+      <SearchIcon />
     </div>
   );
 }
