@@ -31,3 +31,22 @@
 .LogoDiv svg {
   color: #eb740b;
 }
+
+.hoverApper {
+  position: absolute;
+  top: 0px;
+  left: 60px;
+  height: 100%;
+  /* background-color: red; */
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+
+.hoverApper p {
+  margin-top: -2px;
+  line-height: 28px;
+}
