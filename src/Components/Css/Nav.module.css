@@ -18,6 +18,12 @@
   justify-content: center;
   align-items: center;
   padding: 0px 20px;
+  background-image: linear-gradient(to right, transparent 30%, transparent);
+  transition: all 0.3s;
+}
+
+.innerDiv:hover {
+  background-image: linear-gradient(to right, #000 90%, transparent);
 }
 
 .LogoDiv {
@@ -38,18 +44,17 @@
   top: 0px;
   left: 58px;
   height: 100%;
-  background-color: transparent;
+  background-image: linear-gradient(to right, transparent 30%, transparent);
+  /* background-color: red; */
+  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
+  align-items: flex-start;
   gap: 35px;
   z-index: 0;
-  transition: all 0.3s;
-}
-
-.innerDiv:hover {
-  background-image: linear-gradient(to right, #000 90%, transparent);
+  transition: all 0.5s;
 }
 
 .hoverApper p {
