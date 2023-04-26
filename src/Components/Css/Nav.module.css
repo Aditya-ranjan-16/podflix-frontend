@@ -19,7 +19,7 @@
   align-items: center;
   padding: 0px 20px;
   background-image: linear-gradient(to right, transparent 30%, transparent);
-  transition: all 0.3s;
+  transition: all 0.3s 0.3s;
 }
 
 .innerDiv:hover {
@@ -37,20 +37,18 @@
 }
 
 .hoverApper {
-  /* opacity: 0;
+  opacity: 0;
   visibility: hidden;
-  transform: translateX(-100%); */
+  transform: translateX(-100%);
   position: absolute;
   top: 0px;
   left: 58px;
   height: 100%;
   background-image: linear-gradient(to right, transparent 30%, transparent);
-  /* background-color: red; */
   width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
   align-items: flex-start;
   gap: 35px;
   z-index: 0;
