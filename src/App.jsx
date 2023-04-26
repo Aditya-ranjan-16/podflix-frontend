@@ -48,7 +48,14 @@ function App() {
             />
           )} */}
 
-          {/* <Route path="*" element={<Navigate to="/" replace />} /> */}
+          <Route
+            path="*"
+            element={
+              <Suspense fallback={<Loading />}>
+                <Error />
+              </Suspense>
+            }
+          />
         </Routes>
       </Router>
     </>
