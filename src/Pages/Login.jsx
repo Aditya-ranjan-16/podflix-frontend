@@ -1,4 +1,8 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+
+// img
+import img from "./../assets/Login/image 9.svg";
 
 export default function Login() {
   return (
@@ -30,8 +34,8 @@ export default function Login() {
               className="bg-[#191919] mb-1 w-64 sm:w-80 outline-none"
               type="email"
               name="email"
-              onChange={onChange}
-              value={formdata.email}
+              //   onChange={onChange}
+              //   value={formdata.email}
               placeholder="Email ID"
             />
             <hr />
@@ -40,8 +44,8 @@ export default function Login() {
               className="bg-[#191919] mb-1 w-64 sm:w-80 outline-none"
               type="password"
               name="password"
-              onChange={onChange}
-              value={formdata.password}
+              //   onChange={onChange}
+              //   value={formdata.password}
               placeholder="Password"
             />
             <hr />
@@ -49,7 +53,7 @@ export default function Login() {
           <br /> <br />
           <div>
             <button
-              onClick={onlogin}
+              //   onClick={onlogin}
               className="bg-[#282828] w-44 font-semibold text-lg rounded-md py-1"
             >
               Login
