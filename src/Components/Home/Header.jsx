@@ -35,15 +35,6 @@ export default function Header() {
               </div>
             );
           })}
-          {/* <div className={HeaderCss.slide}>
-            <img src={img1} className={HeaderCss.ImgHeader} />
-          </div>
-          <div className={HeaderCss.slide}>
-            <img src={img2} className={HeaderCss.ImgHeader} />
-          </div>
-          <div className={HeaderCss.slide}>
-            <img src={img3} className={HeaderCss.ImgHeader} />
-          </div> */}
         </Sliders>
       </div>
     </div>
