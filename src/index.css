@@ -53,11 +53,3 @@ input[type="number"] {
   overflow-y: auto;
   overflow-x: hidden;
 }
-
-#selected {
-  background: rgba(8, 253, 216, 0.17);
-}
-
-#NotSelected {
-  background-color: transparent;
-}
