@@ -1,6 +1,9 @@
 import React from "react";
 import Sliders from "react-slick";
 
+// Data
+import HeaderData from "./../../Data/Header";
+
 // css
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -20,7 +23,20 @@ export default function Header() {
     <div className={HeaderCss.SlideShow}>
       <div className={HeaderCss.slideDiv}>
         <Sliders {...settings} className={HeaderCss.Hslide}>
-          <div className={HeaderCss.slide}>
+          {HeaderData ? (
+            <>
+              {HeaderData.map((value, key) => {
+                return (
+                  <div className={HeaderCss.slide}>
+                    <img src={HeaderData.img} className={HeaderCss.ImgHeader} />
+                  </div>
+                );
+              })}
+            </>
+          ) : (
+            ""
+          )}
+          {/* <div className={HeaderCss.slide}>
             <img src={img1} className={HeaderCss.ImgHeader} />
           </div>
           <div className={HeaderCss.slide}>
@@ -28,7 +44,7 @@ export default function Header() {
           </div>
           <div className={HeaderCss.slide}>
             <img src={img3} className={HeaderCss.ImgHeader} />
-          </div>
+          </div> */}
         </Sliders>
       </div>
     </div>
