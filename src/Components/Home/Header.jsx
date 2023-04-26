@@ -1,8 +1,10 @@
 import React from "react";
 import Sliders from "react-slick";
 
-// Data
-import HeaderData from "./../../Data/Header";
+// Img
+import Header1 from "./../../assets/Header/h1.jpg";
+import Header2 from "./../../assets/Header/h2.jpg";
+import Header3 from "./../../assets/Header/h3.jpg";
 
 // css
 import "slick-carousel/slick/slick.css";
@@ -10,6 +12,8 @@ import "slick-carousel/slick/slick-theme.css";
 import HeaderCss from "./Css/Header.module.css";
 
 export default function Header() {
+  const mapImg = [Header1, Header2, Header3];
+
   var settings = {
     dots: false,
     infinite: true,
@@ -25,10 +29,13 @@ export default function Header() {
         <Sliders {...settings} className={HeaderCss.Hslide}>
           {HeaderData ? (
             <>
-              {HeaderData.map((value, key) => {
+              {mapImg.map((value, key) => {
                 return (
                   <div className={HeaderCss.slide}>
-                    <img src={HeaderData.img} className={HeaderCss.ImgHeader} />
+                    <img
+                      src={require(`${value.img}`)}
+                      className={HeaderCss.ImgHeader}
+                    />
                   </div>
                 );
               })}
