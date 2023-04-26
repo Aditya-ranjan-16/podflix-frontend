@@ -5,6 +5,9 @@ import React, { useContext, Suspense } from "react";
 const Home = React.lazy(() => import("./pages/Home"));
 const Error = React.lazy(() => import("./pages/Error"));
 
+//
+import Footer from "./Components/Footer";
+
 // Loading
 import Loading from "./Pages/Loading";
 
@@ -51,6 +54,7 @@ function App() {
           />
         </Routes>
       </Router>
+      <Footer />
     </>
   );
 }
