@@ -36,7 +36,7 @@
   transform: translateX(-100%); */
   position: absolute;
   top: 0px;
-  left: 60px;
+  left: 58px;
   height: 100%;
   background-color: transparent;
   display: flex;
@@ -48,6 +48,10 @@
   transition: all 0.3s;
 }
 
+.innerDiv:hover {
+  background-image: linear-gradient(to right, #000 90%, transparent);
+}
+
 .hoverApper p {
   margin-top: -2px;
   line-height: 28px;
@@ -57,5 +61,5 @@
   opacity: 1;
   visibility: visible;
   transform: translateX(0%);
-  background-image: ;
+  background-image: linear-gradient(to right, #000 30%, transparent);
 }
