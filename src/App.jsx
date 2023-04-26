@@ -7,7 +7,8 @@ import {
 import React, { useContext, Suspense } from "react";
 
 // Pages
-const IndexMain = React.lazy(() => import("./pages/IndexMain"));
+const Home = React.lazy(() => import("./pages/Home"));
+const Error = React.lazy(() => import("./pages/Error"));
 
 function App() {
   return <div>Hello World</div>;
