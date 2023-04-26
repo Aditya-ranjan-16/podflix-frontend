@@ -26,7 +26,6 @@ function App() {
               </Suspense>
             }
           />
-
           {/* {!authCtx.isLoggedIn && (
             <Route
               path="/login"
@@ -47,7 +46,6 @@ function App() {
               }
             />
           )} */}
-
           <Route
             path="*"
             element={
