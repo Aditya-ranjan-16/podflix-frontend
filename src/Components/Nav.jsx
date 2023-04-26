@@ -5,11 +5,17 @@ import NCss from "./Css/Nav.module.css";
 
 // icons
 import HomeIcon from "@mui/icons-material/Home";
+import MicNoneIcon from "@mui/icons-material/MicNone";
+import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
+import LocalLibraryIcon from "@mui/icons-material/LocalLibrary";
 
 export default function Nav() {
   return (
     <div className={NCss.mDiv}>
       <HomeIcon />
+      <MicNoneIcon />
+      <OndemandVideoIcon />
+      <LocalLibraryIcon />
     </div>
   );
 }
