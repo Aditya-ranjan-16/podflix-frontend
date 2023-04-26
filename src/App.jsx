@@ -3,7 +3,8 @@ import React, { useContext, Suspense } from "react";
 
 // Pages
 const Home = React.lazy(() => import("./Pages/Home"));
-const Error = React.lazy(() => import("./pages/Error"));
+const Error = React.lazy(() => import("./Pages/Error"));
+const Login = React.lazy(() => import("./Pages/Login"));
 
 // Components
 import Footer from "./Components/Footer";
@@ -21,6 +22,14 @@ function App() {
             element={
               <Suspense fallback={<Loading />}>
                 <Home />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/Login"
+            element={
+              <Suspense fallback={<Loading />}>
+                <Login />
               </Suspense>
             }
           />
