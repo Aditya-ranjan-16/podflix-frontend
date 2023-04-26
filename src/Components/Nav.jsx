@@ -37,11 +37,21 @@ export default function Nav() {
           <SearchIcon />
         </Link>
         <div className={NCss.hoverApper}>
-          <p>Home</p>
-          <p>Audio</p>
-          <p>Video</p>
-          <p>Library</p>
-          <p>Search</p>
+          <Link to="/" className="LinkStyle">
+            <p>Home</p>
+          </Link>
+          <Link to="/Audio" className="LinkStyle">
+            <p>Audio</p>
+          </Link>
+          <Link to="/Videos" className="LinkStyle">
+            <p>Video</p>
+          </Link>
+          <Link to="/Library" className="LinkStyle">
+            <p>Library</p>
+          </Link>
+          <Link to="/Search" className="LinkStyle">
+            <p>Search</p>
+          </Link>
         </div>
       </div>
     </div>
