@@ -38,6 +38,10 @@ export default function IndexMain() {
             <LatestTrending type={"Videos"} data={video} />
 
             <PopularGenres />
+            <br />
+            <br />
+            <br />
+            <br />
           </div>
         </div>
       </div>

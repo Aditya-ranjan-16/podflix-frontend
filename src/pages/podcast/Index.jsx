@@ -3,7 +3,6 @@ import Sidebar from "../../components/Navbar/Sidebar";
 import PodcastContents from "../../components/Podcast/PodcastContents";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 
 function Index() {
   const [podcastData, setPodcastData] = useState(null);
@@ -11,6 +10,7 @@ function Index() {
   const makereq = async () => {
     const res = await axios.post("api/podcast/podcastbyID", { id: id });
     const podcastdata = await res.data;
+
     setPodcastData(podcastdata);
   };
   useEffect(() => {
@@ -22,8 +22,6 @@ function Index() {
         <Sidebar />
         <div className="w-full">
           {podcastData != null && <PodcastContents data={podcastData} />}
-
-          {/* <VideoPlayer /> */}
         </div>
       </div>
     </div>

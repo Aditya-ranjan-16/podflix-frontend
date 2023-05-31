@@ -5,21 +5,25 @@ import img from "../../assets/lm.jpg";
 import play from "../../assets/Group_8.png";
 import { Link } from "react-router-dom";
 
-import AuthContext from "../../store/auth-context";
+import PlayerContext from "../../store/player-context";
 
 function EpisodeContent({ data }) {
-  const authctx = useContext(AuthContext);
+  console.log("data=", data);
+  const playerCtx = useContext(PlayerContext);
   const playEpisode = () => {
     let setplayer = {
       volume: 0.5,
-      src: `https://unusual-handbag-ox.cyclic.app${data.videos[0]}`,
-      type: data.podcast.type,
+      isPlaying: true,
+      src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+      type: "video",
+      // src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+      // type: data.podcast.type,
       currentTime: 0,
-      displayDuration: 0.0,
+      Duration: 0.0,
       playbackRate: 1,
     };
-    authctx.setplayer(setplayer);
-    authctx.fileref.current.play();
+    playerCtx.setplayer(setplayer);
+    playerCtx.setclicked(true);
   };
   return (
     <div className="bg-[#1e1e1e] w-[100%] text-white pl-[5%] pb-32 font-poppins">

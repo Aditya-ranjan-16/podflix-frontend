@@ -1,5 +1,4 @@
 import Sidebar from "../../components/Navbar/Sidebar";
-import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import SubscribedMain from "../../components/Subscribed/SubscribedMain";
 import { useContext, useEffect, useState } from "react";
 import AuthContext from "../../store/auth-context";

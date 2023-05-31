@@ -1,6 +1,6 @@
 import React from "react";
 import Sidebar from "../components/Navbar/Sidebar";
-import VideoPlayer from "../components/VideoPlayer/VideoPlayer";
+
 import SearchContent from "../components/Search/SearchContent";
 
 function Search() {
@@ -10,7 +10,6 @@ function Search() {
         <Sidebar />
         <div className="w-full">
           <SearchContent />
-          <VideoPlayer />
         </div>
       </div>
     </div>

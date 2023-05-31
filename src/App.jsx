@@ -31,7 +31,7 @@ const VidThumbForm = React.lazy(() => import("./pages/dashboard/VidThumbForm"));
 
 import AuthContext from "./store/auth-context";
 import axios from "axios";
-axios.defaults.baseURL = "http://localhost:5000";
+axios.defaults.baseURL = "http://localhost:5000/";
 
 const LoadingPage = () => {
   return <div>Loading</div>;

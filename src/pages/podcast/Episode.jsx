@@ -1,5 +1,4 @@
 import Sidebar from "../../components/Navbar/Sidebar";
-import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import EpisodeContent from "../../components/Podcast/EpisodeContent";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -23,7 +22,6 @@ function Episode() {
           {episodeData != null && (
             <>
               <EpisodeContent data={episodeData} />
-              <VideoPlayer />
             </>
           )}
         </div>
